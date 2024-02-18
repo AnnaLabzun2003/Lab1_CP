@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Лабораторна робота №1
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar><ion-title>Виконала Лабзун Анна, студентка групи КН-32</ion-title></ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Завдання 2</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="p_background">На заданому проміжку чисел [a, b] знайдіть кількість чисел, які при діленні на 11 дають в остачі 3, а при діленні на 5 дають в остачі 1.</p>
+
+      <ion-item>
+        <ion-label position="floating">Початкове число (a)</ion-label>
+        <ion-input type="number" id="a" value="1" #Inputa></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Кінцеве число (b)</ion-label>
+        <ion-input type="number" id="b" value="100" #Inputb></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="findNumbers(Inputa.value, Inputb.value)">Розрахунок</ion-button>
+
+      <ion-item>
+        <p>Кількість чисел: {{result}}</p>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Лабораторна робота №1</ion-title>
+  </ion-toolbar>
+</ion-footer>
